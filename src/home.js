@@ -1,4 +1,4 @@
-import Image from './restaurant-interior.jpg';
+import Image from './assets/restaurant-interior.jpg';
 
 function createHome(parent) {
   const heading = document.createElement("h1");
