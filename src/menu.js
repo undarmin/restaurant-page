@@ -1,11 +1,14 @@
 import Image from './assets/menu-image.jpg';
 
 function createMenu(parent) {
-    const menuHeading = document.createElement('h1');
-    menuHeading.textContent = "Menu";
+    const heading = document.createElement('h1');
+    heading.textContent = "Menu";
     const img = document.createElement('img');
     img.src = Image;
+    img.style.width = "75%";
+    img.style.height = "auto";
 
+    heading.classList.add("heading");
     const menu = document.createElement('div');
     
     const groupStarters = document.createElement('div');
@@ -26,6 +29,7 @@ function createMenu(parent) {
     groupDrinksHeading.textContent = "Drinks";
     for (let i = 0; i < 4; i++) {
         const li = document.createElement('li');
+        li.classList.add('menu-item');
         const name = document.createElement('span');
         const desc = document.createElement('span');
         let nameContent;
@@ -50,6 +54,7 @@ function createMenu(parent) {
     }
     for (let i = 0; i < 4; i++) {
         const li = document.createElement('li');
+        li.classList.add('menu-item');
         const name = document.createElement('span');
         const desc = document.createElement('span');
         let nameContent;
@@ -76,6 +81,7 @@ function createMenu(parent) {
     // Desserts
     for (let i = 0; i < 4; i++) {
         const li = document.createElement('li');
+        li.classList.add('menu-item');
         const name = document.createElement('span');
         const desc = document.createElement('span');
         let nameContent;
@@ -102,6 +108,7 @@ function createMenu(parent) {
     // Drinks
     for (let i = 0; i < 4; i++) {
         const li = document.createElement('li');
+        li.classList.add('menu-item');
         const name = document.createElement('span');
         const desc = document.createElement('span');
         let nameContent;
@@ -125,7 +132,7 @@ function createMenu(parent) {
         groupDrinks.append(li);
     }
     menu.append(groupStarters, groupMains, groupDesserts, groupDrinks);
-    parent.append(menuHeading, img, menu);
+    parent.append(heading, img, menu);
 }
 
 export { createMenu };

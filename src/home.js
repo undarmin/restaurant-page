@@ -8,9 +8,13 @@ function createHome(parent) {
   const paras = [];
 
   heading.textContent = "Thistle & Heather Tavern";
+  heading.classList.add("heading");
   img.src = Image;
   img.alt = "Interior of the restaurant";
+  img.style.width = "75%";
+  img.style.height = "auto";
   headlineInner.textContent = "Embark on a Gastronomic Journey at Thistle & Heather Tavern: Where Scottish Tradition Meets Culinary Innovation!";
+  headline.classList.add('headline');
   headline.appendChild(headlineInner);
 
   parent.append(heading, img, headline);

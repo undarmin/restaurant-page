@@ -1,11 +1,14 @@
 import Image from './assets/about-image.jpg';
 
 function createAbout(parent) {
-  const aboutHeading = document.createElement("h1");
-  aboutHeading.textContent = "About Us: Thistle & Heather Tavern";
+  const heading = document.createElement("h1");
+  heading.textContent = "About Us: Thistle & Heather Tavern";
 
   const img = document.createElement('img');
   img.src = Image;
+  img.style.width = "75%";
+  img.style.height = "auto";
+  heading.classList.add("heading");
 
   // Our Founding Inspiration
   const inspirationSectionHeading = document.createElement("h2");
@@ -44,7 +47,7 @@ function createAbout(parent) {
     "With its cozy interior and warm hospitality, Thistle & Heather Tavern invites you to embark on a culinary adventure through Scotland's heart, one delicious dish at a time.";
 
   parent.append(
-    aboutHeading,
+    heading,
     img,
     inspirationSectionHeading,
     inspirationSectionParagraph,
